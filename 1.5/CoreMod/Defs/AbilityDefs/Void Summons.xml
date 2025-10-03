@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_BabyFleshSummonSTNL</defName>
+		<label>Summon Fingerspike</label>
+		<description>Pry into the rotting corners of the void to summon a Fingerspike to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Fingerspike</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnFingerspike</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>1</level>
+				<order>2</order>
+				<psyfocusCost>0.10</psyfocusCost>
+				<entropyGain>55</entropyGain>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidTerror_Target</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_FleshSummonSTNL</defName>
+		<label>Summon Toughspike</label>
+		<description>Pry into the rotting corners of the void to summon a Toughspike to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Toughspike</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnToughspike</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>2</level>
+				<order>2</order>
+				<psyfocusCost>0.20</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_BabyFleshSummonSTNL</li>
+					<li>VPE_MetalhorrorIMP</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidTerror_Target</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_BigFleshSummonSTNL</defName>
+		<label>Summon Bulbfreak</label>
+		<description>Pry into the rotting corners of the void to summon a Bulbfreak to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Bulbfreak</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnBulbfreak</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>3</level>
+				<order>2</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_FleshSummonSTNL</li>
+					<li>VPE_NoctolSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidTerror_Target</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_MassiveFleshSummonSTNL</defName>
+		<label>Summon Unstable Dreadmeld</label>
+		<description>Pry into the rotting corners of the void to summon a Dreadmeld to help you in battle, the Dreadmeld itself is friendly, it's spawns on the other hand...</description>
+		<iconPath>UI_Void/Abilities/Dreadmeld</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnDreadmeld</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>4</level>
+				<order>2</order>
+				<psyfocusCost>0.40</psyfocusCost>
+				<entropyGain>75</entropyGain>
+				<prerequisites>
+					<li>VPE_BigFleshSummonSTNL</li>
+					<li>VPE_DevourerSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidTerror_Target</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_MetalhorrorIMP</defName>
+		<label>Summon Metalhorror</label>
+		<description>Pry into the metallic hell of the void to summon a Metalhorror to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/SaddamHussein</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnMetalhorror</abilityClass>
+		
+		<castSound>VoidStructure_EmergeSpark</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>60</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>1</level>
+				<order>1</order>
+				<psyfocusCost>0.09</psyfocusCost>
+				<entropyGain>12</entropyGain>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidTerror_Target</effecterDef>
+<maintainForTicks>120</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_NoctolSummonSTNL</defName>
+		<label>Summon Noctol</label>
+		<description>Pry into the dark corners of the void to summon a Noctol to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Noctol</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnNoctol</abilityClass>
+		<castSound>PsychicRitual_Interrupted</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>180</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>2</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>24</entropyGain>
+				<prerequisites>
+					<li>VPE_MetalhorrorIMP</li>
+					<li>VPE_BabyFleshSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>PsychicRitual_Complete</effecterDef>
+<maintainForTicks>120</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_DevourerSummonSTNL</defName>
+		<label>Summon Devourer</label>
+		<description>Pry into the deep corners of the void to summon a Devourer to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Devourer</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnDevourer</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.40</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_NoctolSummonSTNL</li>
+					<li>VPE_FleshSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_ghoulSummonSTNL</defName>
+		<label>Summon Ghoul</label>
+		<description>Pry into the rotting corners of the void to summon a Ghoul to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Ghoul</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnGhoul</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.40</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_DevourerSummonSTNL</li>
+					<li>VPE_BigFleshSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidTerror_Target</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+		<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_ChimeraSummonSTNL</defName>
+		<label>Summon Chimera</label>
+		<description>Pry into the raging corners of the void to summon a Chimera as a familiar (AI Should be fixed now, Report on the steam workshop if it still doesn't attack.).</description>
+		<iconPath>UI_Void/Abilities/Chimera</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnChimera</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>5</level>
+				<order>1</order>
+				<psyfocusCost>0.40</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_ghoulSummonSTNL</li>
+					<li>VPE_MassiveFleshSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_GorehulkSummonSTNL</defName>
+		<label>Summon Gorehulk</label>
+		<description>Pry into the foul corners of the void to summon a Gorehulk to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Gorehulk</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnGorehulk</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>6</level>
+				<order>1</order>
+				<psyfocusCost>0.40</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_ChimeraSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_NociosphereSummonSTNL</defName>
+		<label>Summon Nociosphere</label>
+		<description>Pry into the painful corners of the void to summon a Nociosphere.</description>
+		<iconPath>UI_Void/Abilities/Nociosphere</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnNociosphere</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>7</level>
+				<order>1</order>
+				<psyfocusCost>0.70</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_GorehulkSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_FleshmassNucleusSummonSTNL</defName>
+		<label>Summon Fleshmass Nucleus</label>
+		<description>Pry into the fleshy corners of the void to summon a Fleshmass Nucleus.</description>
+		<iconPath>Things/Pawn/FleshmassNucleus/FleshmassNucleusA</iconPath>
+        <abilityClass>VanillaPsycastsExpanded.Ability_SpawnFleshmassNucleus</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+		<targetMode>Self</targetMode>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>7</level>
+				<order>2</order>
+				<psyfocusCost>0.70</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_NociosphereSummonSTNL</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_Void_node</defName>
+<label>Void Node</label>
+<description>Creates a node of psychic entropy in the form of a void portal. (Requires the monolith to be activated to work, will also raise its level to 4.)</description>
+<iconPath>Things/Building/VoidNode/Core</iconPath>
+<castTime>60</castTime>
+<castSound>VPE_IceCrystal_Cast</castSound>
+<durationTime>300000</durationTime>
+<range>6.9</range>
+<targetMode>Location</targetMode>
+<abilityClass>VFECore.Abilities.Ability_SpawnBuilding</abilityClass>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_VOIDSMN</path>
+<level>6</level>
+<order>2</order>
+<psyfocusCost>0.99</psyfocusCost>
+<entropyGain>200</entropyGain>
+<prerequisites>
+<li>VPE_FleshmassNucleusSummonSTNL</li>
+</prerequisites>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_Building">
+<building>VoidNode</building>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>Skip_Exit</effecterDef>
+<maintainForTicks>60</maintainForTicks>
+<scale>0.42</scale>
+</li>
+</modExtensions>
+</VFECore.Abilities.AbilityDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_DeathpallSMNSTNL</defName>
+    <label>Deathpall</label>
+    <description>Unleash a Death pall in the area, the shamblers will attack anyone outside. Stay inside and watch. (1 day duration)</description>
+    <iconPath>UI_Void/Abilities/Deathpall</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>600</castTime>
+    <targetMode>Self</targetMode>
+    <castSound>PsychicShockLanceCast</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_VOIDSMN</path>
+        <level>5</level>
+        <order>3</order>
+        <psyfocusCost>0.7</psyfocusCost>
+        <entropyGain>100</entropyGain>
+        <prerequisites>
+          <li>VPE_Void_node</li>
+        </prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+        <gameCondition>DeathPall</gameCondition>
+        <durationDays>1</durationDays>
+        <sendLetter>true</sendLetter>
+      </li>
+    </modExtensions>
+	 </VFECore.Abilities.AbilityDef>
+	 
+	 <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_ObeliskmakerSTNL</defName>
+		<label>Obelisk Manifestation Study</label>
+		<description>Reflect on the origin of the void, causing this pawn to learn how to manifest obelisks at will.</description>
+		<iconPath>UI_Void/Abilities/Obelisks</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<castTime>30</castTime>
+        <targetMode>Self</targetMode>
+		<castSound>PsychicRitual_Interrupted_Human</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>5</level>
+				<order>3</order>
+				<psyfocusCost>0.8</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				        <prerequisites>
+          <li>VPE_Void_node</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>ObeliskMasterySTNL</hediff>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	 
+	 <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_BloodRainSMNSTNL</defName>
+    <label>Blood Rain</label>
+    <description>Unleash a rain of blood that will turn anyone in the area mad. (1 day duration)</description>
+    <iconPath>UI/PsychicRituals/PsychicRitual_BloodRain</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>600</castTime>
+    <targetMode>Self</targetMode>
+    <castSound>PsychicShockLanceCast</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_VOIDSMN</path>
+        <level>4</level>
+        <order>3</order>
+        <psyfocusCost>0.7</psyfocusCost>
+        <entropyGain>100</entropyGain>
+        <prerequisites>
+          <li>VPE_Void_node</li>
+        </prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+        <gameCondition>BloodRain</gameCondition>
+        <durationDays>1</durationDays>
+        <sendLetter>true</sendLetter>
+      </li>
+    </modExtensions>
+	 </VFECore.Abilities.AbilityDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>Obelisk1STNL</defName>
+<label>Warped Obelisk Summon</label>
+<description>Order the void to manifest an obelisk.</description>
+<iconPath>Things/Building/Obelisk_Warped/WarpedObelisk</iconPath>
+<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+<displayOrder>100</displayOrder>
+<warmupEffecter>VoidNodeAttached</warmupEffecter>
+<hostile>false</hostile>
+<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+<verbClass>Verb_CastAbilityTouch</verbClass>
+<drawAimPie>false</drawAimPie>
+<range>-1</range>
+<warmupTime>2</warmupTime>
+<targetParams>
+<canTargetLocations>true</canTargetLocations>
+<canTargetPawns>false</canTargetPawns>
+<canTargetBuildings>false</canTargetBuildings>
+</targetParams>
+</verbProperties>
+<comps>
+<li Class="CompProperties_AbilitySpawn">
+<thingDef>WarpedObelisk_Abductor</thingDef>
+<allowOnBuildings>False</allowOnBuildings>
+</li>
+</comps>
+</AbilityDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>Obelisk2STNL</defName>
+<label>Corrupted Obelisk Summon</label>
+<description>Order the void to manifest an obelisk.</description>
+<iconPath>Things/Building/Obelisk_Corrupted/CorruptedObelisk</iconPath>
+<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+<displayOrder>100</displayOrder>
+<warmupEffecter>VoidNodeAttached</warmupEffecter>
+<hostile>false</hostile>
+<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+<verbClass>Verb_CastAbilityTouch</verbClass>
+<drawAimPie>false</drawAimPie>
+<range>-1</range>
+<warmupTime>2</warmupTime>
+<targetParams>
+<canTargetLocations>true</canTargetLocations>
+<canTargetPawns>false</canTargetPawns>
+<canTargetBuildings>false</canTargetBuildings>
+</targetParams>
+</verbProperties>
+<comps>
+<li Class="CompProperties_AbilitySpawn">
+<thingDef>WarpedObelisk_Duplicator</thingDef>
+<allowOnBuildings>False</allowOnBuildings>
+</li>
+</comps>
+</AbilityDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>Obelisk3STNL</defName>
+<label>Twisted Obelisk Summon</label>
+<description>Order the void to manifest an obelisk.</description>
+<iconPath>Things/Building/Obelisk_Twisted/TwistedObelisk</iconPath>
+<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+<displayOrder>100</displayOrder>
+<warmupEffecter>VoidNodeAttached</warmupEffecter>
+<hostile>false</hostile>
+<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+<verbClass>Verb_CastAbilityTouch</verbClass>
+<drawAimPie>false</drawAimPie>
+<range>-1</range>
+<warmupTime>2</warmupTime>
+<targetParams>
+<canTargetLocations>true</canTargetLocations>
+<canTargetPawns>false</canTargetPawns>
+<canTargetBuildings>false</canTargetBuildings>
+</targetParams>
+</verbProperties>
+<comps>
+<li Class="CompProperties_AbilitySpawn">
+<thingDef>WarpedObelisk_Mutator</thingDef>
+<allowOnBuildings>False</allowOnBuildings>
+</li>
+</comps>
+</AbilityDef>
+
+</Defs>

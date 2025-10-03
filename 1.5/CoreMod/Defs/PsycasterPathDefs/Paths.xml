@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_VOID</defName>
+    <label>Horaxian</label>
+    <description>Embrace the power of the dark archotech.</description>
+    <background>UI_Void/Tree/Voidtree</background>
+    <altBackground>UI_Void/Tree/Voidtreebase</altBackground>
+    <tab>Misc</tab>
+    <tooltip>Embrace the power of the dark archotech.</tooltip>
+	    <lockedReason>Horaxians only</lockedReason>
+    <requiredFocus>VPE_VoidFoci</requiredFocus>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+   <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_VOIDSMN</defName>
+    <label>Horaxian Invoker</label>
+    <description>Embrace the power of the dark archotech to manifest various creatures and phenomenons.</description>
+    <background>UI_Void/Tree/Voidtree</background>
+    <altBackground>UI_Void/Tree/Voidtreebase</altBackground>
+    <tab>Misc</tab>
+    <tooltip>Embrace the power of the dark archotech to manifest various creatures and phenomenons.</tooltip>
+	    <lockedReason>Horaxians only</lockedReason>
+    <requiredFocus>VPE_VoidFoci</requiredFocus>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+</Defs>

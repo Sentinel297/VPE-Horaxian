@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<ThingDef ParentName="BasePawn">
+    
+	<defName>VPE_ChimeraS</defName>
+    <label>chimera S</label>
+    <description>A huge creature that resembles a disfigured combination of a bear and other animals. It is vicious without limit.\n\nIt's not known if this is a combination of natural animals or a poor imitation of animal life created by an insane machine mind.</description>
+    <tradeability>None</tradeability>
+    <hiddenWhileUndiscovered>true</hiddenWhileUndiscovered>
+    <race>
+      <baseHealthScale>3</baseHealthScale>
+      <body>QuadrupedAnimalWithPaws</body>
+      <baseBodySize>2.15</baseBodySize>
+      <leatherDef>Leather_Dread</leatherDef>
+      <needsRest>false</needsRest>
+      <fleshType>EntityFlesh</fleshType>
+      <isImmuneToInfections>true</isImmuneToInfections>
+      <specificMeatDef>Meat_Twisted</specificMeatDef>
+      <foodType>None</foodType>
+      <bloodDef>Filth_DarkBlood</bloodDef>
+      <bleedRateFactor>0.5</bleedRateFactor>
+      <thinkTreeMain>Metalhorror</thinkTreeMain>
+      <thinkTreeConstant>MetalhorrorConstant</thinkTreeConstant>
+      <trainability>None</trainability>
+      <canBecomeShambler>true</canBecomeShambler>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundCall>Pawn_Chimera_Call</soundCall>
+          <soundWounded>Pawn_Chimera_Wounded</soundWounded>
+          <soundDeath>Pawn_Chimera_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <hediffGiverSets>
+        <li>AnomalyEntity</li>
+      </hediffGiverSets>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.2)</li>
+        <li>(0.3, 0, 0.1)</li>
+        <li>(0.0, 0, -0.06)</li>
+        <li>(-0.3, 0, 0.1)</li>
+      </headPosPerRotation>
+      <hasGenders>false</hasGenders>
+      <corpseHiddenWhileUndiscovered>true</corpseHiddenWhileUndiscovered>
+    </race>
+    <statBases>
+      <MoveSpeed>3.6</MoveSpeed>
+      <MinimumContainmentStrength>70</MinimumContainmentStrength>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <LeatherAmount>20</LeatherAmount>
+      <MeatAmount>70</MeatAmount>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <uiIconScale>1.15</uiIconScale>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right claw</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>23.6</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.5</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <comps Inherit="False">
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li Class="CompProperties_Chimera">
+        <simpleAnimalLabel>chimera</simpleAnimalLabel>
+      </li>
+      <li Class="CompProperties_Studiable">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <anomalyKnowledge>1</anomalyKnowledge>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
+      <li Class="CompProperties_HoldingPlatformTarget">
+        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+      </li>
+      
+      <li Class="CompProperties_AttachPoints">
+        <points>
+          <li>
+            <offset>(-.6, 0, .6)</offset>
+            <type>PlatformRestraint0</type>
+          </li>
+          <li>
+            <offset>(.6, 0, .6)</offset>
+            <type>PlatformRestraint1</type>
+          </li>
+          <li>
+            <offset>(.6, 0, -.7)</offset>
+            <type>PlatformRestraint2</type>
+          </li>
+          <li>
+            <offset>(-.6, 0, -.7)</offset>
+            <type>PlatformRestraint3</type>
+          </li>
+        </points>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite">
+        <bioferriteDensity>1.5</bioferriteDensity>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <PawnKindDef>
+<defName>VPE_ChimeraSTNL</defName>
+<label>Chimera</label>
+<race>VPE_ChimeraS</race>
+<overrideDeathOnDownedChance>0.25</overrideDeathOnDownedChance>
+<overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+<combatPower>135</combatPower>
+<ecoSystemWeight>0.5</ecoSystemWeight>
+<defaultFactionType>Entities</defaultFactionType>
+<alternateGraphicChance>0.75</alternateGraphicChance>
+<alternateGraphics>
+<li>
+<texPath>Things/Pawn/Chimera/Chimera_D</texPath>
+<dessicatedTexPath>Things/Pawn/Chimera/Dessicated/DessicatedChimera_D</dessicatedTexPath>
+<dessicatedGraphicData>
+<attachPoints>
+<li>
+<offset>(-.2, 0, .7)</offset>
+<type>PlatformRestraint0</type>
+</li>
+<li>
+<offset>(.2, 0, .7)</offset>
+<type>PlatformRestraint1</type>
+</li>
+<li>
+<offset>(.3, 0, -.8)</offset>
+<type>PlatformRestraint2</type>
+</li>
+<li>
+<offset>(-.3, 0, -.8)</offset>
+<type>PlatformRestraint3</type>
+</li>
+</attachPoints>
+</dessicatedGraphicData>
+<attachPoints>
+<li>
+<offset>(-.3, 0, .75)</offset>
+<type>PlatformRestraint0</type>
+</li>
+<li>
+<offset>(.2, 0, .75)</offset>
+<type>PlatformRestraint1</type>
+</li>
+<li>
+<offset>(.2, 0, -.6)</offset>
+<type>PlatformRestraint2</type>
+</li>
+<li>
+<offset>(-.2, 0, -.6)</offset>
+<type>PlatformRestraint3</type>
+</li>
+</attachPoints>
+</li>
+<li>
+<texPath>Things/Pawn/Chimera/Chimera_C</texPath>
+<dessicatedTexPath>Things/Pawn/Chimera/Dessicated/DessicatedChimera_C</dessicatedTexPath>
+<dessicatedGraphicData>
+<attachPoints>
+<li>
+<offset>(-.25, 0, .7)</offset>
+<type>PlatformRestraint0</type>
+</li>
+<li>
+<offset>(.2, 0, .7)</offset>
+<type>PlatformRestraint1</type>
+</li>
+<li>
+<offset>(.3, 0, -.7)</offset>
+<type>PlatformRestraint2</type>
+</li>
+<li>
+<offset>(-.3, 0, -.7)</offset>
+<type>PlatformRestraint3</type>
+</li>
+</attachPoints>
+</dessicatedGraphicData>
+<attachPoints>
+<li>
+<offset>(-.4, 0, .6)</offset>
+<type>PlatformRestraint0</type>
+</li>
+<li>
+<offset>(.3, 0, .6)</offset>
+<type>PlatformRestraint1</type>
+</li>
+<li>
+<offset>(.2, 0, -.7)</offset>
+<type>PlatformRestraint2</type>
+</li>
+<li>
+<offset>(-.25, 0, -.7)</offset>
+<type>PlatformRestraint3</type>
+</li>
+</attachPoints>
+</li>
+<li>
+<texPath>Things/Pawn/Chimera/Chimera_B</texPath>
+<dessicatedTexPath>Things/Pawn/Chimera/Dessicated/DessicatedChimera_B</dessicatedTexPath>
+<dessicatedGraphicData>
+<attachPoints>
+<li>
+<offset>(-.2, 0, .6)</offset>
+<type>PlatformRestraint0</type>
+</li>
+<li>
+<offset>(.2, 0, .6)</offset>
+<type>PlatformRestraint1</type>
+</li>
+<li>
+<offset>(.5, 0, -.8)</offset>
+<type>PlatformRestraint2</type>
+</li>
+<li>
+<offset>(-.5, 0, -.8)</offset>
+<type>PlatformRestraint3</type>
+</li>
+</attachPoints>
+</dessicatedGraphicData>
+<attachPoints>
+<li>
+<offset>(-.4, 0, .7)</offset>
+<type>PlatformRestraint0</type>
+</li>
+<li>
+<offset>(.35, 0, .7)</offset>
+<type>PlatformRestraint1</type>
+</li>
+<li>
+<offset>(.6, 0, -.85)</offset>
+<type>PlatformRestraint2</type>
+</li>
+<li>
+<offset>(-.6, 0, -.85)</offset>
+<type>PlatformRestraint3</type>
+</li>
+</attachPoints>
+</li>
+</alternateGraphics>
+<lifeStages>
+<li>
+<bodyGraphicData>
+<texPath>Things/Pawn/Chimera/Chimera_A</texPath>
+<graphicClass>Graphic_Multi</graphicClass>
+<drawSize>2.7</drawSize>
+</bodyGraphicData>
+<dessicatedBodyGraphicData>
+<texPath>Things/Pawn/Chimera/Dessicated/DessicatedChimera_A</texPath>
+<graphicClass>Graphic_Multi</graphicClass>
+<drawSize>2.7</drawSize>
+<attachPoints>
+<li>
+<offset>(-.5, 0, .5)</offset>
+<type>PlatformRestraint0</type>
+</li>
+<li>
+<offset>(.5, 0, .5)</offset>
+<type>PlatformRestraint1</type>
+</li>
+<li>
+<offset>(.4, 0, -.5)</offset>
+<type>PlatformRestraint2</type>
+</li>
+<li>
+<offset>(-.4, 0, -.5)</offset>
+<type>PlatformRestraint3</type>
+</li>
+</attachPoints>
+</dessicatedBodyGraphicData>
+</li>
+</lifeStages>
+</PawnKindDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>TransmuteBioferriteSTNL</defName>
+<label>transmute Bioferrite</label>
+<description>Reconfigure bioferrite at the atomic level, turning it into a highly valuable material. Can target a stack of bioferrite.</description>
+<iconPath>UI/Abilities/TransmuteSteel</iconPath>
+<cooldownTicksRange>10000</cooldownTicksRange>
+<!--  20 hours  -->
+<showPsycastEffects>false</showPsycastEffects>
+<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+<moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+<warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+<warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+<warmupSound>AnomalyAbilityWarmup</warmupSound>
+<useAverageTargetPositionForWarmupEffecter>true</useAverageTargetPositionForWarmupEffecter>
+<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+<verbClass>Verb_CastAbility</verbClass>
+<drawAimPie>false</drawAimPie>
+<warmupTime>2</warmupTime>
+<range>-1</range>
+<targetParams>
+<canTargetSelf>false</canTargetSelf>
+<canTargetBuildings>true</canTargetBuildings>
+<canTargetPawns>false</canTargetPawns>
+<canTargetItems>true</canTargetItems>
+<thingCategory>Item</thingCategory>
+<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+</targetParams>
+</verbProperties>
+<comps>
+<li Class="CompProperties_Transmute">
+<failedMessage>Must target bioferrite.</failedMessage>
+<elementRatios>
+<li>
+<sourceStuff>Bioferrite</sourceStuff>
+<ratio>0.035</ratio>
+</li>
+</elementRatios>
+<outcomeStuff>
+<li>Shard</li>
+</outcomeStuff>
+<outcomeItems>
+<li>Shard</li>
+</outcomeItems>
+</li>
+</comps>
+</AbilityDef>	
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_ShardmakerSTNL</defName>
+		<label>Bioferrite Transmutation Study</label>
+		<description>Reflect on the origin of the void, causing this pawn to learn how to transform bioferrite into shards.</description>
+		<iconPath>UI/Abilities/TransmuteSteel</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<castTime>30</castTime>
+        <targetMode>Self</targetMode>
+		<castSound>PsychicRitual_Interrupted_Human</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>1</level>
+				<order>2</order>
+				<psyfocusCost>0.3</psyfocusCost>
+				<entropyGain>35</entropyGain>
+				        <prerequisites>
+          <li>VPE_Inhumanization</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>TransmutationMasterySTNL</hediff>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Inhumanization</defName>
+		<label>Inhumanization</label>
+		<description>Opens the eyes of the affected, causing them to become inhumanized after an humanity break.</description>
+		<iconPath>UI_Void/Abilities/Inhumanize</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<goodwillImpact>-100</goodwillImpact>
+		<castTime>30</castTime>
+		<durationTime>12000</durationTime>
+    	<range>12.9</range>
+		<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>false</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>false</canTargetMechs>
+		</targetingParameters>
+		<castSound>PsychicRitual_Interrupted_Human</castSound>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>1</level>
+				<order>1</order>
+				<psyfocusCost>0.3</psyfocusCost>
+				<entropyGain>35</entropyGain>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>Inhumanized</hediff>
+			</li>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
+        <stateDef>HumanityBreak</stateDef>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+	
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_VOIDPsychicShock</defName>
+    <label>Overwhelming horrors</label>
+    <description>Psychically force the target into a state of shock by assaulting their mind with horrors of the void. The target will collapse to the ground as their mind fails to comprehend this attack.</description>
+    <iconPath>UI_Void/Abilities/Darkshock</iconPath>
+    <castTime>120</castTime>
+    <durationTime>12000</durationTime>
+    <targetMode>Pawn</targetMode>
+    <range>14</range>
+    <goodwillImpact>-100</goodwillImpact>
+<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>PsychicRitual_Interrupted</castSound>
+    <fleckOnTarget>PsychicRitual_Complete</fleckOnTarget>
+	<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_VOID</path>
+        <level>2</level>
+        <order>1</order>
+        <psyfocusCost>0.30</psyfocusCost>
+        <entropyGain>30</entropyGain>
+        <prerequisites>
+          <li>VPE_Inhumanization</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>DarkPsychicShock</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+  
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_MutatorObeliskTurretSTNL</defName>
+	<label>Mini-Mutator Obelisk</label>
+	<description>Conjure an obelisk capable of turning nearby enemies into creatures of twisted flesh, the obelisk requires focus to upkeep, resulting in a permanent increase of 75 neural heat for as long as it exists.</description>
+	<iconPath>UI_Void/Abilities/MiniMutatorSTNL</iconPath>
+	<abilityClass>VPE_Horax.Ability_MutatorObeliskSpawn</abilityClass>
+	<needsTicking>true</needsTicking>
+	<castTime>360</castTime>
+	<castSound>PsychicRitual_Interrupted</castSound>
+	<goodwillImpact>0</goodwillImpact>
+	<range>12.9</range>
+	<radius>10</radius>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetHumans>false</canTargetHumans>
+	</targetingParameters>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_VOID</path>
+			<level>3</level>
+			<order>1</order>
+			<psyfocusCost>0.30</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_Ghoulify</li>
+			</prerequisites>
+		</li>
+		<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+			<effecterDef>VoidStructureActivated</effecterDef>
+			<maintainForTicks>600</maintainForTicks>
+			<scale>0.42</scale>
+		</li>
+	</modExtensions>
+</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_VOIDpulse</defName>
+    <label>Neverending Nightmare</label>
+    <description>Sends out a pulse of incoherent images of the void inside the minds of the targets, causing them to wander around in terror.</description>
+    <iconPath>UI_Void/Abilities/Horrors</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>240</castTime>
+    <durationTime>36000</durationTime>
+    <range>45</range>
+    <radius>12.5</radius>
+    <targetMode>Location</targetMode>
+    <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>False</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+      <neverTargetIncapacitated>True</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+    <fleckOnTarget>VFEP_PsycastAreaEffectSlow</fleckOnTarget>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_VOID</path>
+        <level>3</level>
+        <order>2</order>
+        <psyfocusCost>0.33</psyfocusCost>
+        <entropyGain>90</entropyGain>
+        <prerequisites>
+          <li>VPE_VOIDPsychicShock</li>
+        </prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
+        <stateDef>TerrifyingHallucinations</stateDef>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+  
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_FrenzyObeliskTurretSTNL</defName>
+	<label>Mini-Frenzy Obelisk</label>
+	<description>Conjure an obelisk capable of turning nearby enemies mad, causing them to enter a state of berserk rage. The obelisk requires focus to upkeep, resulting in a permanent increase of 75 neural heat for as long as it exists.</description>
+	<iconPath>UI_Void/Abilities/MiniFrenzySTNL</iconPath>
+	<abilityClass>VPE_Horax.Ability_FrenzyObeliskSpawn</abilityClass>
+	<needsTicking>true</needsTicking>
+	<castTime>360</castTime>
+	<castSound>PsychicRitual_Interrupted</castSound>
+	<goodwillImpact>0</goodwillImpact>
+	<range>12.9</range>
+	<radius>7.5</radius>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetHumans>false</canTargetHumans>
+	</targetingParameters>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_VOID</path>
+			<level>3</level>
+			<order>3</order>
+			<psyfocusCost>0.30</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_VoidSight</li>
+			</prerequisites>
+		</li>
+		<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+			<effecterDef>VoidStructureActivated</effecterDef>
+			<maintainForTicks>600</maintainForTicks>
+			<scale>0.42</scale>
+		</li>
+	</modExtensions>
+</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Ghoulify</defName>
+		<label>Partial Ghoulification</label>
+		<description>Partially twist the innards of the target while keeping their mind intact, granting them slight regenerative capabilities at the cost of being near psychically deaf.\n\nThe process will cause the target to enter a state of berserk rage.</description>
+		<iconPath>UI_Void/Abilities/Partial</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<castSound>VPE_Liferot_Cast</castSound>
+		<castTime>320</castTime>
+		<goodwillImpact>-50</goodwillImpact>
+		<chance>0</chance>
+		<range>12.9</range>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>False</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.75</psyfocusCost>
+				<entropyGain>24</entropyGain>
+				<prerequisites>
+          <li>VPE_Deathrefusal</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>DemiGhoul</hediff>
+			</li>
+			      <li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
+        <stateDef>Berserk</stateDef>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_TrueGhoulify</defName>
+		<label>True Ghoulification</label>
+		<description>Violently mutate the target, twisting their flesh and breaking their mind to turn them into a mindless creature that feasts on raw flesh.</description>
+		<iconPath>UI_Void/Abilities/TrueGhoul</iconPath>
+		<abilityClass>VPE_Horax.Ability_Ghoulify</abilityClass>
+		<castSound>VPE_Liferot_Cast</castSound>
+		<castTime>320</castTime>
+		<chance>0</chance>
+		<goodwillImpact>-100</goodwillImpact>
+		<range>12.9</range>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>false</canTargetAnimals>
+			<canTargetMechs>False</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>5</level>
+				<order>1</order>
+				<psyfocusCost>0.80</psyfocusCost>
+				<entropyGain>50</entropyGain>
+				<prerequisites>
+          <li>VPE_Ghoulify</li>
+        </prerequisites>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_Deathrefusal</defName>
+		<label>Void Rebirth</label>
+		<description>Manifests a shard of dark origins within the target, allowing them to resurrect shall they meet their end.</description>
+		<iconPath>UI/PsychicRituals/PsychicRitual_ImbueDeathRefusal</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<castSound>MechSerumUsed</castSound>
+		<castTime>30</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>True</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.85</psyfocusCost>
+				<entropyGain>100</entropyGain>
+				<prerequisites>
+          <li>VPE_VoidSight</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>DeathRefusal</hediff>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_VoidSight</defName>
+		<label>Void Sight</label>
+		<description>Psychically bestow void sight upon the target, allowing them to study void entities with greater efficiency. The target will additionally gain a slight increase to their psychic sensitivity.</description>
+		<iconPath>UI_Void/Abilities/VoidSight</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<castSound>VPE_Liferot_Cast</castSound>
+		<castTime>30</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<durationTime>36000</durationTime>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>True</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>100</entropyGain>
+				<prerequisites>
+          <li>VPE_VOIDpulse</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>Voidsight</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_RageSpeed</defName>
+		<label>Void Hate</label>
+		<description>Triggers a strong feeling of hatred inside of the target, making them enter a state of pure rage that will grant them immunity to pain and increased movement speed.</description>
+		<iconPath>UI_Void/Abilities/VoidHate</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<needsTicking>true</needsTicking>
+		<castTime>60</castTime>
+		<castSound>PsychicRitual_Interrupted</castSound>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<durationTime>18000</durationTime>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>True</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>6</level>
+				<order>3</order>
+				<psyfocusCost>0.75</psyfocusCost>
+				<entropyGain>100</entropyGain>
+				<prerequisites>
+          <li>VPE_HoraxianInvisibility</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>RageSpeed</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_VoidHealStnl</defName>
+		<label>Void Regeneration</label>
+		<description>Temporarily envelop the target with dark archites capable of overloading regenerative capabilities. Granting them unnatural healing for a short time.</description>
+		<iconPath>UI_Void/Abilities/VoidHeal</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<needsTicking>true</needsTicking>
+		<castTime>60</castTime>
+		<castSound>PsychicRitual_Interrupted</castSound>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<durationTime>5000</durationTime>
+	<durationTimeStatFactors>
+		<PsychicSensitivity>1</PsychicSensitivity>
+	</durationTimeStatFactors>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>True</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>7</level>
+				<order>3</order>
+				<psyfocusCost>0.60</psyfocusCost>
+				<entropyGain>100</entropyGain>
+				<prerequisites>
+          <li>VPE_RageSpeed</li>
+		  <li>VPE_VoidReap</li>
+        </prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>VoidSootheSTNL</hediff>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_AbductorObeliskSTNL</defName>
+	<label>Mini-Abductor Obelisk</label>
+	<description>Conjure an obelisk capable of abducting nearby enemies, causing them to be transported near this obelisk. The obelisk requires focus to upkeep, resulting in a permanent increase of 100 neural heat for as long as it exists.\n\nWon't pull enemies within the red area.</description>
+	<iconPath>UI_Void/Abilities/MiniAbductorSTNL</iconPath>
+	<abilityClass>VPE_Horax.Ability_AbductorObeliskSpawn</abilityClass>
+	<needsTicking>true</needsTicking>
+	<castTime>360</castTime>
+	<castSound>PsychicRitual_Interrupted</castSound>
+	<goodwillImpact>0</goodwillImpact>
+	<range>12.9</range>
+	<radius>15</radius>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetMechs>false</canTargetMechs>
+		<canTargetHumans>false</canTargetHumans>
+	</targetingParameters>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_VOID</path>
+			<level>5</level>
+			<order>2</order>
+			<psyfocusCost>0.30</psyfocusCost>
+			<entropyGain>0</entropyGain>
+			<prerequisites>
+				<li>VPE_Deathrefusal</li>
+			</prerequisites>
+		</li>
+		<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+			<effecterDef>VoidStructureActivated</effecterDef>
+			<maintainForTicks>600</maintainForTicks>
+			<scale>0.42</scale>
+		</li>
+	</modExtensions>
+</VFECore.Abilities.AbilityDef>
+	
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_HoraxianInvisibility</defName>
+		<label>Void Penumbra</label>
+		<description>Partially banishes the target into the void, causing their form to become ethereal, rendering them invisible until used again on the target.\nBeing hit while in this state will disperse the invisibility for a brief moment as the psychic field restabilizes itself.</description>
+		<iconPath>UI_Void/Abilities/VoidPenumbra</iconPath>
+        <abilityClass>VPE_Horax.Ability_PenumbraToggle</abilityClass>
+		<needsTicking>true</needsTicking>
+		<castTime>60</castTime>
+		<castSound>PsychicRitual_Interrupted</castSound>
+		<goodwillImpact>0</goodwillImpact>
+		<range>12.9</range>
+		<targetingParameters>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>True</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>5</level>
+				<order>3</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>100</entropyGain>
+				<prerequisites>
+          <li>VPE_VoidSight</li>
+        </prerequisites>
+			</li>
+
+			<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidStructureActivated</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_VoidReap</defName>
+<label>Soul Scour</label>
+<description>Rip the consciousness from the targets, only leaving behind lifeless husks.\nCan rip any sort of consciousness, be it natural or unnatural, organic or inorganic.</description>
+		<iconPath>UI_Void/Abilities/SoulReap</iconPath>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<castSound>VoidStructure_Activate</castSound>
+		<castTime>180</castTime>
+		<goodwillImpact>-100</goodwillImpact>
+		<range>30</range>
+		<radius>1.5</radius>
+		<targetMode>Location</targetMode>
+        <hasAoE>true</hasAoE>
+		<durationTime>180</durationTime>
+		<targetingParametersForAoE>
+		    <canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>false</canTargetAnimals>
+			<canTargetMechs>false</canTargetMechs>
+			<canTargetHumans>True</canTargetHumans>
+		</targetingParametersForAoE>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOID</path>
+				<level>6</level>
+				<order>1</order>
+				<psyfocusCost>0.65</psyfocusCost>
+				<entropyGain>225</entropyGain>
+				<prerequisites>
+					<li>VPE_TrueGhoulify</li>
+				</prerequisites>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>InstantDeathm</hediff>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_VoidMutationSTNL</defName>
+	<label>Void Mutation</label>
+	<description>Violently mutate the target by infusing them with a large concentration of dark archites, resulting in them turning into a random Void entity. This entity can then be captured if you successfully contain it.</description>
+	<iconPath>UI_Void/Abilities/VoidMutation</iconPath>
+	<abilityClass>VPE_Horax.Ability_VoidMutation</abilityClass>
+	<castSound>PsychicRitual_Interrupted</castSound>
+	<warmupSound>PsychicRitual_Ongoing_Human</warmupSound>
+	<castTime>1500</castTime>
+	<targetMode>Pawn</targetMode>
+	<chance>0</chance>
+	<goodwillImpact>-100</goodwillImpact>
+	<targetingParameters>
+		<canTargetLocations>False</canTargetLocations>
+		<canTargetSelf>True</canTargetSelf>
+		<canTargetAnimals>True</canTargetAnimals>
+		<canTargetMechs>True</canTargetMechs>
+		<canTargetHumans>True</canTargetHumans>
+	</targetingParameters>
+	<needsTicking>True</needsTicking>
+	<jobDef>VFEA_GotoTargetAndUseAbility</jobDef>
+	<requireLineOfSight>false</requireLineOfSight>
+	<range>999999</range>
+	<distanceToTarget>3</distanceToTarget>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_VOID</path>
+			<level>6</level>
+			<order>2</order>
+			<psyfocusCost>0.80</psyfocusCost>
+			<entropyGain>50</entropyGain>
+			<prerequisites>
+				<li>VPE_TrueGhoulify</li>
+			</prerequisites>
+		</li>
+		<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+			<effecterDef>VoidStructureActivated</effecterDef>
+			<maintainForTicks>600</maintainForTicks>
+			<scale>0.42</scale>
+		</li>
+	</modExtensions>
+</VFECore.Abilities.AbilityDef>
+
+</Defs>
