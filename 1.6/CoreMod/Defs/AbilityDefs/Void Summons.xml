@@ -428,7 +428,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_ghoulSummonSTNL</defName>
 		<label>Summon Ghoul squad</label>
-		<description>Pry into the rotting corners of the void to summon a Ghoul to help you in battle.</description>
+		<description>Displace a group of feral ghouls from the Void to fight the caster's enemies.</description>
 		<iconPath>UI_Void/Abilities/Ghoul</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 		<castSound>VoidMonolith_ActivatedL2L3</castSound>
