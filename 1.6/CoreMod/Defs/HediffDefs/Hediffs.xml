@@ -1,0 +1,154 @@
+<Defs>
+<HediffDef>
+<defName>InstantDeathm</defName>
+<label>Death</label>
+<description>I'm dead.</description>
+<hediffClass>HediffWithComps</hediffClass>
+<defaultLabelColor>(0.1,1.0, 0.7)</defaultLabelColor>
+<lethalSeverity>0</lethalSeverity>
+<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
+<makesSickThought>true</makesSickThought>
+<scenarioCanAdd>true</scenarioCanAdd>
+<isBad>false</isBad>
+<everCurableByItem>false</everCurableByItem>
+<stages>
+<li>
+<label>Instant Death</label>
+<minSeverity>0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0</setMax>
+          </li>
+        </capMods>
+</li>
+</stages>
+</HediffDef>
+
+<HediffDef>
+	<defName>DemiGhoul</defName>
+	<label>Half-Ghoul</label>
+	<description>This person has been turned into a being that is between life and death, granting them several bonuses at the cost of their psychic influence being severely dampened.</description>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<painFactor>0</painFactor>
+			<statFactors>
+				<MaxNutrition>2</MaxNutrition>
+				<PsychicSensitivity>0.10</PsychicSensitivity>
+			</statFactors>
+			<regeneration>25</regeneration>
+			<statOffsets>
+				<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+				<ComfyTemperatureMax>40</ComfyTemperatureMax>
+				<MinimumContainmentStrength>35</MinimumContainmentStrength>
+			</statOffsets>
+		</li>
+	</stages>
+</HediffDef>
+  
+<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+	<defName>VoidSootheSTNL</defName>
+	<label>Void Regeneration</label>
+	<description>This creature is being healed by dark archites.</description>
+	<descriptionShort>This creature is being healed by dark archites.</descriptionShort>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<regeneration>100</regeneration>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>2000</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_Effecter">
+			<stateEffecter>BiomutationPulserWarmup</stateEffecter>
+		</li>
+	</comps>
+</HediffDef>
+	
+	 <HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+      <defName>TransmutationMasterySTNL</defName>
+      <label>Shard-Maker</label>
+      <description>This person has the abilty to convert bioferrite into shards.</description>
+      <descriptionShort>This person has the abilty to convert bioferrite into shards.</descriptionShort>
+      <isBad>false</isBad>
+	  <abilities>
+      <li>TransmuteBioferriteSTNL</li>
+    </abilities>
+    </HediffDef>
+	
+	<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+      <defName>ObeliskMasterySTNL</defName>
+      <label>Obelisk-Maker</label>
+      <description>This person has the abilty to manifest obelisks at will.</description>
+      <descriptionShort>This person has the abilty to manifest obelisks at will.</descriptionShort>
+      <isBad>false</isBad>
+	  <abilities>
+      <li>Obelisk1STNL</li>
+	  <li>Obelisk2STNL</li>
+	  <li>Obelisk3STNL</li>
+    </abilities>
+    </HediffDef>
+	
+<HediffDef>
+	<defName>VPE_Horaxian_NoTendSTNL</defName>
+	<label>Can't be tended</label>
+	<description>This creature won't be tended if it's injured.</description>
+	<hediffClass>VPE_Horax.Hediff_NoTend</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0, 0)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+		<becomeVisible>false</becomeVisible>
+		</li>
+	</stages>
+</HediffDef>
+
+<!-- Void summons -->
+
+<HediffDef>
+	<defName>VPE_Horaxian_Summon_Synergy_STNL</defName>
+	<label>Void Synergy</label>
+	<description>This creature is being empowered by its summoner.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<minSeverity>0</minSeverity>
+	<maxSeverity>1</maxSeverity>
+	<!-- <lethalSeverity>1</lethalSeverity> -->
+	<defaultLabelColor>(0.6, 0.6, 0.6)</defaultLabelColor>
+	<makesSickThought>false</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>false</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<painFactor>0.75</painFactor>
+			<regeneration>25</regeneration>
+			<!-- <statFactors> -->
+				<!-- <MaxNutrition>2</MaxNutrition> -->
+				<!-- <PsychicSensitivity>0.10</PsychicSensitivity> -->
+			<!-- </statFactors> -->
+		</li>
+	</stages>
+</HediffDef>
+	
+</Defs>
