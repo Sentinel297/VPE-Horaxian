@@ -17,7 +17,7 @@
     <label>Horaxian Invoker</label>
     <description>Embrace the power of the dark archotech to manifest various creatures and phenomenons.</description>
     <background>UI_Void/Tree/Voidtree</background>
-    <altBackground>UI_Void/Tree/Voidtreebase</altBackground>
+    <altBackground>UI_Void/Tree/VoidtreebaseB</altBackground>
     <tab>Misc</tab>
     <tooltip>Embrace the power of the dark archotech to manifest various creatures and phenomenons.</tooltip>
 	    <lockedReason>Horaxians only</lockedReason>

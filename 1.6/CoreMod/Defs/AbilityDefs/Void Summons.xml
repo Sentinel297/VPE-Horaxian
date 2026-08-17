@@ -640,7 +640,7 @@
 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 <defName>VPE_Void_node</defName>
-<label>Void Node</label>
+<label>Void node</label>
 <description>Creates a node of psychic entropy in the form of a void portal. (Requires the monolith to be activated to work, will also raise its level to 4.)</description>
 <iconPath>Things/Building/VoidNode/Core</iconPath>
 <castTime>60</castTime>
