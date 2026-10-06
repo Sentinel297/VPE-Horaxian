@@ -1001,8 +1001,8 @@
 		<targetingParametersForAoE>
 		    <canTargetLocations>False</canTargetLocations>
 			<canTargetSelf>True</canTargetSelf>
-			<canTargetAnimals>false</canTargetAnimals>
-			<canTargetMechs>false</canTargetMechs>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetMechs>True</canTargetMechs>
 			<canTargetHumans>True</canTargetHumans>
 		</targetingParametersForAoE>
 		<modExtensions>
