@@ -1,0 +1,112 @@
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VPE_ObeliskTurretMutatorSTNL</defName>
+		<label>Mini-Mutator Obelisk</label>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Obelisk_Twisted/TwistedObelisk</texPath>
+			<drawSize>(1.5, 1.5)</drawSize>
+		</graphicData>
+		<thingClass>VPE_Horax.MutatorTurret</thingClass>
+		<tickerType>Normal</tickerType>
+		<size>(1,1)</size>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<selectable>true</selectable>
+		<building>
+			<paintable>false</paintable>
+			<deconstructible>true</deconstructible>
+			<claimable>true</claimable>
+			<soundMeleeHitOverride>ObeliskDamaged</soundMeleeHitOverride>
+		</building>
+		<destroyable>true</destroyable>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<MeditationFocusStrength>0.24</MeditationFocusStrength>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Void</li>
+				</focusTypes>
+			</li>
+			<li Class="VPE_Horax.CompProperties_DestroyObeliskGizmo"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VPE_ObeliskFrenzySTNL</defName>
+		<label>Mini-Frenzy Obelisk</label>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Obelisk_Corrupted/CorruptedObelisk</texPath>
+			<drawSize>(1.5, 1.5)</drawSize>
+		</graphicData>
+		<thingClass>VPE_Horax.ObeliskFrenzy</thingClass>
+		<tickerType>Normal</tickerType>
+		<size>(1,1)</size>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<selectable>true</selectable>
+		<building>
+			<paintable>false</paintable>
+			<deconstructible>true</deconstructible>
+			<claimable>true</claimable>
+			<soundMeleeHitOverride>ObeliskDamaged</soundMeleeHitOverride>
+		</building>
+		<destroyable>true</destroyable>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<MeditationFocusStrength>0.24</MeditationFocusStrength>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Void</li>
+				</focusTypes>
+			</li>
+			<li Class="VPE_Horax.CompProperties_DestroyObeliskGizmo"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>VPE_ObeliskAbductorSTNL</defName>
+		<label>Mini-Abductor Obelisk</label>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Obelisk_Warped/WarpedObelisk</texPath>
+			<drawSize>(1.5, 1.5)</drawSize>
+		</graphicData>
+		<thingClass>VPE_Horax.Obelisk_Abductor</thingClass>
+		<tickerType>Normal</tickerType>
+		<size>(1,1)</size>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<building>
+			<paintable>false</paintable>
+			<deconstructible>true</deconstructible>
+			<claimable>true</claimable>
+			<soundMeleeHitOverride>ObeliskDamaged</soundMeleeHitOverride>
+		</building>
+		<destroyable>true</destroyable>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<MeditationFocusStrength>0.24</MeditationFocusStrength>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Void</li>
+				</focusTypes>
+			</li>
+			<li Class="VPE_Horax.CompProperties_DestroyObeliskGizmo"/>
+		</comps>
+	</ThingDef>
+</Defs>

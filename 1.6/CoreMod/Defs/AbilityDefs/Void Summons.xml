@@ -3,8 +3,8 @@
 
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_BabyFleshSummonSTNL</defName>
-	<label>Summon Fingerspike swarm</label>
-	<description>Call forth a swarm of fingerspikes from the Void to overwhelm foes.</description>
+	<label>Summon Fingerspike</label>
+	<description>Pry into the rotting corners of the void to summon a Fingerspike to help you in battle.</description>
 	<iconPath>UI_Void/Abilities/Fingerspike</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 	<castSound>VoidMonolith_ActivatedL2L3</castSound>
@@ -35,13 +35,7 @@
 			<allied>true</allied>
 			<hediffs>
 				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
 			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>10</maxSpawnCount>
-			<psychicSensiPerUnit>0.25</psychicSensiPerUnit>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 			<effecterDef>VoidTerror_Target</effecterDef>
@@ -53,8 +47,8 @@
 	
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_FleshSummonSTNL</defName>
-	<label>Summon Toughspike swarm</label>
-	<description>Conjure a swarm of Toughspikes from the Void.</description>
+	<label>Summon Toughspike</label>
+	<description>Pry into the rotting corners of the void to summon a Toughspike to help you in battle.</description>
 	<iconPath>UI_Void/Abilities/Toughspike</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 	<castSound>VoidMonolith_ActivatedL2L3</castSound>
@@ -77,11 +71,11 @@
 			<path>VPE_VOIDSMN</path>
 			<level>2</level>
 			<order>2</order>
-			<psyfocusCost>0.08</psyfocusCost>
+			<psyfocusCost>0.20</psyfocusCost>
 			<entropyGain>55</entropyGain>
 			<prerequisites>
 				<li>VPE_BabyFleshSummonSTNL</li>
-				<li>VPE_NoctolSummonSTNL</li>
+				<li>VPE_MetalhorrorIMP</li>
 			</prerequisites>
 		</li>
 				<li Class="VPE_Horax.Ability_PawnkindSpawner">
@@ -89,13 +83,7 @@
 			<allied>true</allied>
 			<hediffs>
 				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
 			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>10</maxSpawnCount>
-			<psychicSensiPerUnit>0.5</psychicSensiPerUnit>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 			<effecterDef>VoidTerror_Target</effecterDef>
@@ -107,8 +95,8 @@
 	
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_BigFleshSummonSTNL</defName>
-	<label>Summon Bulbfreak pack</label>
-	<description>Manifest a pack of entities composed of twisted flesh.</description>
+	<label>Summon Bulbfreak</label>
+	<description>Pry into the rotting corners of the void to summon a Bulbfreak to help you in battle.</description>
 	<iconPath>UI_Void/Abilities/Bulbfreak</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 	<castSound>VoidMonolith_ActivatedL2L3</castSound>
@@ -131,11 +119,11 @@
 			<path>VPE_VOIDSMN</path>
 			<level>3</level>
 			<order>2</order>
-			<psyfocusCost>0.13</psyfocusCost>
+			<psyfocusCost>0.30</psyfocusCost>
 			<entropyGain>55</entropyGain>
 			<prerequisites>
 				<li>VPE_FleshSummonSTNL</li>
-				<li>VPE_GorehulkSummonSTNL</li>
+				<li>VPE_NoctolSummonSTNL</li>
 			</prerequisites>
 		</li>
 		<li Class="VPE_Horax.Ability_PawnkindSpawner">
@@ -143,13 +131,7 @@
 			<allied>true</allied>
 			<hediffs>
 				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
 			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>4</maxSpawnCount>
-			<psychicSensiPerUnit>1</psychicSensiPerUnit>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 			<effecterDef>VoidTerror_Target</effecterDef>
@@ -161,8 +143,8 @@
 	
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_MassiveFleshSummonSTNL</defName>
-	<label>Summon unstable Dreadmeld duo</label>
-	<description>Conjure twin Dreadmelds at the target location, these Dreadmelds will produce hostile offspring when damaged and slain.</description>
+	<label>Summon Unstable Dreadmeld</label>
+	<description>Pry into the rotting corners of the void to summon a Dreadmeld to help you in battle, the Dreadmeld itself is friendly, it's spawns on the other hand...</description>
 	<iconPath>UI_Void/Abilities/Dreadmeld</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 	<castSound>VoidMonolith_ActivatedL2L3</castSound>
@@ -185,11 +167,11 @@
 			<path>VPE_VOIDSMN</path>
 			<level>4</level>
 			<order>2</order>
-			<psyfocusCost>0.20</psyfocusCost>
+			<psyfocusCost>0.40</psyfocusCost>
 			<entropyGain>75</entropyGain>
 			<prerequisites>
 				<li>VPE_BigFleshSummonSTNL</li>
-				<li>VPE_MetalhorrorIMP</li>
+				<li>VPE_DevourerSummonSTNL</li>
 			</prerequisites>
 		</li>
 		<li Class="VPE_Horax.Ability_PawnkindSpawner">
@@ -197,13 +179,7 @@
 			<allied>true</allied>
 			<hediffs>
 				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
 			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>2</maxSpawnCount>
-			<psychicSensiPerUnit>1</psychicSensiPerUnit>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 			<effecterDef>VoidTerror_Target</effecterDef>
@@ -213,114 +189,12 @@
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
+
+
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>VPE_NoctolSummonSTNL</defName>
-		<label>Summon Noctol swarm</label>
-		<description>Call forth a swarm of Noctol from the Void to fight the caster's enemies.</description>
-		<iconPath>UI_Void/Abilities/Noctol</iconPath>
-	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
-		<castSound>PsychicRitual_Interrupted</castSound>
-	<targetMode>Location</targetMode>
-	<targetingParameters>
-		<canTargetLocations>True</canTargetLocations>
-		<canTargetSelf>false</canTargetSelf>
-		<canTargetAnimals>false</canTargetAnimals>
-		<canTargetPawns>false</canTargetPawns>
-		<canTargetHumans>false</canTargetHumans>
-		<canTargetMechs>false</canTargetMechs>
-	</targetingParameters>
-		<castTime>180</castTime>
-		<goodwillImpact>0</goodwillImpact>
-		<needsTicking>true</needsTicking>
-		<range>12.9</range>
-		<durationTime>1</durationTime>
-		<modExtensions>
-			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
-				<path>VPE_VOIDSMN</path>
-				<level>1</level>
-				<order>1</order>
-				<psyfocusCost>0.08</psyfocusCost>
-				<entropyGain>24</entropyGain>
-			</li>
-		<li Class="VPE_Horax.Ability_PawnkindSpawner">
-			<pawnkind>Noctol</pawnkind>
-			<allied>true</allied>
-			<hediffs>
-				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
-			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>10</maxSpawnCount>
-			<psychicSensiPerUnit>0.33</psychicSensiPerUnit>
-		</li>
-			<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
-<effecterDef>PsychicRitual_Complete</effecterDef>
-<maintainForTicks>120</maintainForTicks>
-<scale>0.42</scale>
-</li>
-		</modExtensions>
-	</VEF.Abilities.AbilityDef>
-	
-	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-	<defName>VPE_GorehulkSummonSTNL</defName>
-	<label>Summon Gorehulk pack</label>
-	<description>Invoke a pack of Gorehulk to assault the caster's enemies.</description>
-	<iconPath>UI_Void/Abilities/Gorehulk</iconPath>
-	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
-	<castSound>VoidMonolith_ActivatedL2L3</castSound>
-	<targetMode>Location</targetMode>
-	<targetingParameters>
-		<canTargetLocations>True</canTargetLocations>
-		<canTargetSelf>false</canTargetSelf>
-		<canTargetAnimals>false</canTargetAnimals>
-		<canTargetPawns>false</canTargetPawns>
-		<canTargetHumans>false</canTargetHumans>
-		<canTargetMechs>false</canTargetMechs>
-	</targetingParameters>
-	<castTime>180</castTime>
-	<goodwillImpact>0</goodwillImpact>
-	<needsTicking>true</needsTicking>
-	<range>12.9</range>
-	<durationTime>1</durationTime>
-	<modExtensions>
-		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
-			<path>VPE_VOIDSMN</path>
-			<level>2</level>
-			<order>1</order>
-			<psyfocusCost>0.09</psyfocusCost>
-			<entropyGain>55</entropyGain>
-			<prerequisites>
-				<li>VPE_NoctolSummonSTNL</li>
-				<li>VPE_BabyFleshSummonSTNL</li>
-			</prerequisites>
-		</li>
-		<li Class="VPE_Horax.Ability_PawnkindSpawner">
-			<pawnkind>Gorehulk</pawnkind>
-			<allied>true</allied>
-			<hediffs>
-				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
-			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>10</maxSpawnCount>
-			<psychicSensiPerUnit>0.5</psychicSensiPerUnit>
-		</li>
-		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
-			<effecterDef>VoidStructureActivated</effecterDef>
-			<maintainForTicks>600</maintainForTicks>
-			<scale>0.42</scale>
-		</li>
-	</modExtensions>
-</VEF.Abilities.AbilityDef>
-	
-	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_MetalhorrorIMP</defName>
-	<label>Summon Metalhorror horde</label>
-	<description>Conjure a horde of Metalhorrors from the Void. These metalhorrors will relentlessly attack enemies.</description>
+	<label>Summon Metalhorror</label>
+	<description>Pry into the metallic hell of the void to summon a Metalhorror to help you in battle.</description>
 	<iconPath>UI_Void/Abilities/SaddamHussein</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 	<castSound>VoidStructure_EmergeSpark</castSound>
@@ -341,27 +215,17 @@
 	<modExtensions>
 		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
 			<path>VPE_VOIDSMN</path>
-			<level>3</level>
+			<level>1</level>
 			<order>1</order>
-			<psyfocusCost>0.12</psyfocusCost>
+			<psyfocusCost>0.09</psyfocusCost>
 			<entropyGain>12</entropyGain>
-				<prerequisites>
-					<li>VPE_GorehulkSummonSTNL</li>
-					<li>VPE_FleshSummonSTNL</li>
-				</prerequisites>
 		</li>
 		<li Class="VPE_Horax.Ability_PawnkindSpawner">
 			<pawnkind>MetalhorrorSTNLSMN</pawnkind>
 			<allied>true</allied>
 			<hediffs>
 				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
 			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>10</maxSpawnCount>
-			<psychicSensiPerUnit>0.75</psychicSensiPerUnit>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 			<effecterDef>VoidTerror_Target</effecterDef>
@@ -370,11 +234,61 @@
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
+
+
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_NoctolSummonSTNL</defName>
+		<label>Summon Noctol</label>
+		<description>Pry into the dark corners of the void to summon a Noctol to help you in battle.</description>
+		<iconPath>UI_Void/Abilities/Noctol</iconPath>
+	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
+		<castSound>PsychicRitual_Interrupted</castSound>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+		<castTime>180</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>2</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>24</entropyGain>
+				<prerequisites>
+					<li>VPE_MetalhorrorIMP</li>
+					<li>VPE_BabyFleshSummonSTNL</li>
+				</prerequisites>
+			</li>
+		<li Class="VPE_Horax.Ability_PawnkindSpawner">
+			<pawnkind>Noctol</pawnkind>
+			<allied>true</allied>
+			<hediffs>
+				<li>VPE_Horaxian_NoTendSTNL</li>
+			</hediffs>
+		</li>
+			<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>PsychicRitual_Complete</effecterDef>
+<maintainForTicks>120</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
 	
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_DevourerSummonSTNL</defName>
-		<label>Summon Devourer horde</label>
-		<description>Call forth a horde of Devourers from the Void, these entities will quickly consume enemy creatures.</description>
+		<label>Summon Devourer</label>
+		<description>Pry into the deep corners of the void to summon a Devourer to help you in battle.</description>
 		<iconPath>UI_Void/Abilities/Devourer</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 		<castSound>VoidMonolith_ActivatedL2L3</castSound>
@@ -395,12 +309,13 @@
 		<modExtensions>
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
 				<path>VPE_VOIDSMN</path>
-				<level>4</level>
+				<level>3</level>
 				<order>1</order>
-				<psyfocusCost>0.14</psyfocusCost>
+				<psyfocusCost>0.30</psyfocusCost>
 				<entropyGain>55</entropyGain>
 				<prerequisites>
-					<li>VPE_MetalhorrorIMP</li>
+					<li>VPE_NoctolSummonSTNL</li>
+					<li>VPE_FleshSummonSTNL</li>
 				</prerequisites>
 			</li>
 		<li Class="VPE_Horax.Ability_PawnkindSpawner">
@@ -408,13 +323,7 @@
 			<allied>true</allied>
 			<hediffs>
 				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
 			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>10</maxSpawnCount>
-			<psychicSensiPerUnit>1</psychicSensiPerUnit>
 		</li>
 			<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 <effecterDef>VoidStructureActivated</effecterDef>
@@ -427,9 +336,57 @@
 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_ghoulSummonSTNL</defName>
-		<label>Summon Ghoul squad</label>
-		<description>Displace a group of feral ghouls from the Void to fight the caster's enemies.</description>
+		<label>Summon Ghoul</label>
+		<description>Pry into the rotting corners of the void to summon a Ghoul to help you in battle.</description>
 		<iconPath>UI_Void/Abilities/Ghoul</iconPath>
+	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
+		<castSound>VoidMonolith_ActivatedL2L3</castSound>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+		<castTime>360</castTime>
+		<goodwillImpact>0</goodwillImpact>
+		<needsTicking>true</needsTicking>
+		<range>12.9</range>
+		<durationTime>1</durationTime>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_VOIDSMN</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.30</psyfocusCost>
+				<entropyGain>55</entropyGain>
+				<prerequisites>
+					<li>VPE_DevourerSummonSTNL</li>
+					<li>VPE_BigFleshSummonSTNL</li>
+				</prerequisites>
+			</li>
+		<li Class="VPE_Horax.Ability_PawnkindSpawner">
+			<pawnkind>Ghoul</pawnkind>
+			<allied>true</allied>
+			<hediffs>
+				<li>VPE_Horaxian_NoTendSTNL</li>
+			</hediffs>
+		</li>
+			<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>VoidTerror_Target</effecterDef>
+<maintainForTicks>600</maintainForTicks>
+<scale>0.42</scale>
+</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+	
+		<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_ChimeraSummonSTNL</defName>
+		<label>Summon Chimera</label>
+		<description>Pry into the raging corners of the void to summon a Chimera as a familiar (AI Should be fixed now, Report on the steam workshop if it still doesn't attack.).</description>
+		<iconPath>UI_Void/Abilities/Chimera</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 		<castSound>VoidMonolith_ActivatedL2L3</castSound>
 	<targetMode>Location</targetMode>
@@ -454,36 +411,77 @@
 				<psyfocusCost>0.20</psyfocusCost>
 				<entropyGain>55</entropyGain>
 				<prerequisites>
-					<li>VPE_DevourerSummonSTNL</li>
+					<li>VPE_ghoulSummonSTNL</li>
 					<li>VPE_MassiveFleshSummonSTNL</li>
 				</prerequisites>
 			</li>
 		<li Class="VPE_Horax.Ability_PawnkindSpawner">
-			<pawnkind>Ghoul</pawnkind>
+			<pawnkind>VPE_ChimeraSTNL</pawnkind>
 			<allied>true</allied>
 			<hediffs>
 				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
 			</hediffs>
-			<overrideAi>false</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>5</maxSpawnCount>
-			<psychicSensiPerUnit>1.5</psychicSensiPerUnit>
 		</li>
 			<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
-<effecterDef>VoidTerror_Target</effecterDef>
+<effecterDef>VoidStructureActivated</effecterDef>
 <maintainForTicks>600</maintainForTicks>
 <scale>0.42</scale>
 </li>
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
 	
-		<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>VPE_ChimeraSummonSTNL</defName>
-		<label>Summon Chimera pack</label>
-		<description>Summon a pack of raging chimeras, these entities will become faster upon taking damage.</description>
-		<iconPath>UI_Void/Abilities/Chimera</iconPath>
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<defName>VPE_GorehulkSummonSTNL</defName>
+	<label>Summon Gorehulk</label>
+	<description>Pry into the foul corners of the void to summon a Gorehulk to help you in battle.</description>
+	<iconPath>UI_Void/Abilities/Gorehulk</iconPath>
+	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
+	<castSound>VoidMonolith_ActivatedL2L3</castSound>
+	<targetMode>Location</targetMode>
+	<targetingParameters>
+		<canTargetLocations>True</canTargetLocations>
+		<canTargetSelf>false</canTargetSelf>
+		<canTargetAnimals>false</canTargetAnimals>
+		<canTargetPawns>false</canTargetPawns>
+		<canTargetHumans>false</canTargetHumans>
+		<canTargetMechs>false</canTargetMechs>
+	</targetingParameters>
+	<castTime>180</castTime>
+	<goodwillImpact>0</goodwillImpact>
+	<needsTicking>true</needsTicking>
+	<range>12.9</range>
+	<durationTime>1</durationTime>
+	<modExtensions>
+		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<path>VPE_VOIDSMN</path>
+			<level>6</level>
+			<order>1</order>
+			<psyfocusCost>0.20</psyfocusCost>
+			<entropyGain>55</entropyGain>
+			<prerequisites>
+				<li>VPE_ChimeraSummonSTNL</li>
+			</prerequisites>
+		</li>
+		<li Class="VPE_Horax.Ability_PawnkindSpawner">
+			<pawnkind>Gorehulk</pawnkind>
+			<allied>true</allied>
+			<hediffs>
+				<li>VPE_Horaxian_NoTendSTNL</li>
+			</hediffs>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+			<effecterDef>VoidStructureActivated</effecterDef>
+			<maintainForTicks>600</maintainForTicks>
+			<scale>0.42</scale>
+		</li>
+	</modExtensions>
+</VEF.Abilities.AbilityDef>
+
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>VPE_NociosphereSummonSTNL</defName>
+		<label>Summon Nociosphere</label>
+		<description>Pry into the painful corners of the void to summon a Nociosphere.</description>
+		<iconPath>UI_Void/Abilities/Nociosphere</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 		<castSound>VoidMonolith_ActivatedL2L3</castSound>
 	<targetMode>Location</targetMode>
@@ -503,26 +501,17 @@
 		<modExtensions>
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
 				<path>VPE_VOIDSMN</path>
-				<level>6</level>
+				<level>7</level>
 				<order>1</order>
-				<psyfocusCost>0.14</psyfocusCost>
+				<psyfocusCost>0.70</psyfocusCost>
 				<entropyGain>55</entropyGain>
 				<prerequisites>
-					<li>VPE_ghoulSummonSTNL</li>
+					<li>VPE_GorehulkSummonSTNL</li>
 				</prerequisites>
 			</li>
 		<li Class="VPE_Horax.Ability_PawnkindSpawner">
-			<pawnkind>VPE_ChimeraSTNL</pawnkind>
-			<allied>true</allied>
-			<hediffs>
-				<li>VPE_Horaxian_NoTendSTNL</li>
-				<li>VPE_Horaxian_Summon_Synergy_STNL</li>
-			</hediffs>
-			<overrideAi>true</overrideAi>
-			<customBehavior>true</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>10</maxSpawnCount>
-			<psychicSensiPerUnit>1</psychicSensiPerUnit>
+			<pawnkind>Nociosphere</pawnkind>
+			<allied>false</allied>
 		</li>
 			<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 <effecterDef>VoidStructureActivated</effecterDef>
@@ -531,64 +520,11 @@
 </li>
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
-
-<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-	<defName>VPE_NociosphereSummonSTNL</defName>
-	<label>Summon Nociosphere</label>
-	<description>Manifest a Nociosphere from the Void. This entity may be studied to uncover its secrets.</description>
-	<iconPath>UI_Void/Abilities/Nociosphere</iconPath>
-	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
-	<castSound>VoidMonolith_ActivatedL2L3</castSound>
-	<targetMode>Location</targetMode>
-	<targetingParameters>
-		<canTargetLocations>True</canTargetLocations>
-		<canTargetSelf>false</canTargetSelf>
-		<canTargetAnimals>false</canTargetAnimals>
-		<canTargetPawns>false</canTargetPawns>
-		<canTargetHumans>false</canTargetHumans>
-		<canTargetMechs>false</canTargetMechs>
-	</targetingParameters>
-	<castTime>360</castTime>
-	<goodwillImpact>0</goodwillImpact>
-	<needsTicking>true</needsTicking>
-	<range>12.9</range>
-	<durationTime>1</durationTime>
-	<modExtensions>
-		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
-			<path>VPE_VOIDSMN</path>
-			<level>7</level>
-			<order>1</order>
-			<psyfocusCost>0.40</psyfocusCost>
-			<entropyGain>55</entropyGain>
-			<prerequisites>
-				<li>VPE_ChimeraSummonSTNL</li>
-			</prerequisites>
-		</li>
-		<li Class="VPE_Horax.Ability_PawnkindSpawner">
-			<pawnkind>Nociosphere</pawnkind>
-			<allied>false</allied>
-			<overrideAi>false</overrideAi>
-			<customBehavior>false</customBehavior>
-						<!-- <hediffs> -->
-				<!-- <li>VPE_Horaxian_NoTendSTNL</li> -->
-				<!-- <li>VPE_Horaxian_Summon_Synergy_STNL</li> -->
-			<!-- </hediffs> -->
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>1</maxSpawnCount>
-			<psychicSensiPerUnit>1</psychicSensiPerUnit>
-		</li>
-		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
-			<effecterDef>VoidStructureActivated</effecterDef>
-			<maintainForTicks>600</maintainForTicks>
-			<scale>0.42</scale>
-		</li>
-	</modExtensions>
-</VEF.Abilities.AbilityDef>
 	
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_FleshmassNucleusSummonSTNL</defName>
-	<label>Summon Fleshmass nucleus</label>
-	<description>Conjure a Fleshmass nucleus, this mass of twisted flesh will periodically produce twisted meat.</description>
+	<label>Summon Fleshmass Nucleus</label>
+	<description>Pry into the fleshy corners of the void to summon a Fleshmass Nucleus.</description>
 	<iconPath>Things/Pawn/FleshmassNucleus/FleshmassNucleusA</iconPath>
 	<abilityClass>VPE_Horax.Ability_SpawnPawnKind</abilityClass>
 	<castSound>VoidMonolith_ActivatedL2L3</castSound>
@@ -611,7 +547,7 @@
 			<path>VPE_VOIDSMN</path>
 			<level>7</level>
 			<order>2</order>
-			<psyfocusCost>0.40</psyfocusCost>
+			<psyfocusCost>0.70</psyfocusCost>
 			<entropyGain>55</entropyGain>
 			<prerequisites>
 				<li>VPE_NociosphereSummonSTNL</li>
@@ -620,15 +556,6 @@
 		<li Class="VPE_Horax.Ability_PawnkindSpawner">
 			<pawnkind>FleshmassNucleus</pawnkind>
 			<allied>false</allied>
-			<!-- <hediffs> -->
-				<!-- <li>VPE_Horaxian_NoTendSTNL</li> -->
-				<!-- <li>VPE_Horaxian_Summon_Synergy_STNL</li> -->
-			<!-- </hediffs> -->
-			<overrideAi>false</overrideAi>
-			<customBehavior>false</customBehavior>
-			<baseSpawnCount>1</baseSpawnCount>
-			<maxSpawnCount>1</maxSpawnCount>
-			<psychicSensiPerUnit>1</psychicSensiPerUnit>
 		</li>
 		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
 			<effecterDef>VoidStructureActivated</effecterDef>
@@ -640,7 +567,7 @@
 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 <defName>VPE_Void_node</defName>
-<label>Void node</label>
+<label>Void Node</label>
 <description>Creates a node of psychic entropy in the form of a void portal. (Requires the monolith to be activated to work, will also raise its level to 4.)</description>
 <iconPath>Things/Building/VoidNode/Core</iconPath>
 <castTime>60</castTime>
@@ -672,6 +599,35 @@
 </li>
 </modExtensions>
 </VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_DeathpallSMNSTNL</defName>
+    <label>Deathpall</label>
+    <description>Unleash a Death pall in the area, the shamblers will attack anyone outside. Stay inside and watch. (1 day duration)</description>
+    <iconPath>UI_Void/Abilities/Deathpall</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>600</castTime>
+    <targetMode>Self</targetMode>
+    <castSound>PsychicShockLanceCast</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_VOIDSMN</path>
+        <level>5</level>
+        <order>3</order>
+        <psyfocusCost>0.7</psyfocusCost>
+        <entropyGain>100</entropyGain>
+        <prerequisites>
+          <li>VPE_Void_node</li>
+        </prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+        <gameCondition>DeathPall</gameCondition>
+        <durationDays>1</durationDays>
+        <sendLetter>true</sendLetter>
+      </li>
+    </modExtensions>
+	 </VEF.Abilities.AbilityDef>
 	 
 	 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_ObeliskmakerSTNL</defName>
@@ -698,6 +654,35 @@
 			</li>
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
+	 
+	 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_BloodRainSMNSTNL</defName>
+    <label>Blood Rain</label>
+    <description>Unleash a rain of blood that will turn anyone in the area mad. (1 day duration)</description>
+    <iconPath>UI/PsychicRituals/PsychicRitual_BloodRain</iconPath>
+    <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+    <castTime>600</castTime>
+    <targetMode>Self</targetMode>
+    <castSound>PsychicShockLanceCast</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_VOIDSMN</path>
+        <level>4</level>
+        <order>3</order>
+        <psyfocusCost>0.7</psyfocusCost>
+        <entropyGain>100</entropyGain>
+        <prerequisites>
+          <li>VPE_Void_node</li>
+        </prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+        <gameCondition>BloodRain</gameCondition>
+        <durationDays>1</durationDays>
+        <sendLetter>true</sendLetter>
+      </li>
+    </modExtensions>
+	 </VEF.Abilities.AbilityDef>
 
 <AbilityDef ParentName="AbilityTouchBase">
 <defName>Obelisk1STNL</defName>

@@ -26,27 +26,28 @@
 </HediffDef>
 
 <HediffDef>
-	<defName>DemiGhoul</defName>
-	<label>Half-Ghoul</label>
-	<description>This person has been turned into a being that is between life and death, granting them several bonuses at the cost of their psychic influence being severely dampened.</description>
-	<everCurableByItem>false</everCurableByItem>
-	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-	<stages>
-		<li>
-			<painFactor>0</painFactor>
-			<statFactors>
-				<MaxNutrition>2</MaxNutrition>
-				<PsychicSensitivity>0.10</PsychicSensitivity>
-			</statFactors>
-			<regeneration>25</regeneration>
-			<statOffsets>
-				<ComfyTemperatureMin>-40</ComfyTemperatureMin>
-				<ComfyTemperatureMax>40</ComfyTemperatureMax>
-				<MinimumContainmentStrength>35</MinimumContainmentStrength>
-			</statOffsets>
-		</li>
-	</stages>
-</HediffDef>
+    <defName>DemiGhoul</defName>
+    <label>Half-Ghoul</label>
+    <description>This person has been turned into a being that is between life and death, granting them several bonuses at the cost of their psychic influence being severely dampened.</description>
+    <everCurableByItem>false</everCurableByItem>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <MaxNutrition>2</MaxNutrition>
+          <PsychicSensitivity>0.10</PsychicSensitivity>
+		  
+        </statFactors>
+		<regeneration>25</regeneration>
+        <statOffsets>
+          <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+          <ComfyTemperatureMax>40</ComfyTemperatureMax>
+          <MinimumContainmentStrength>35</MinimumContainmentStrength>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
   
 <HediffDef>
 	<hediffClass>HediffWithComps</hediffClass>
@@ -118,35 +119,6 @@
 	<stages>
 		<li>
 		<becomeVisible>false</becomeVisible>
-		</li>
-	</stages>
-</HediffDef>
-
-<!-- Void summons -->
-
-<HediffDef>
-	<defName>VPE_Horaxian_Summon_Synergy_STNL</defName>
-	<label>Void Synergy</label>
-	<description>This creature is being empowered by its summoner.</description>
-	<hediffClass>HediffWithComps</hediffClass>
-	<initialSeverity>1</initialSeverity>
-	<minSeverity>0</minSeverity>
-	<maxSeverity>1</maxSeverity>
-	<!-- <lethalSeverity>1</lethalSeverity> -->
-	<defaultLabelColor>(0.6, 0.6, 0.6)</defaultLabelColor>
-	<makesSickThought>false</makesSickThought>
-	<scenarioCanAdd>false</scenarioCanAdd>
-	<isBad>false</isBad>
-	<everCurableByItem>false</everCurableByItem>
-	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-	<stages>
-		<li>
-			<painFactor>0.75</painFactor>
-			<regeneration>25</regeneration>
-			<!-- <statFactors> -->
-				<!-- <MaxNutrition>2</MaxNutrition> -->
-				<!-- <PsychicSensitivity>0.10</PsychicSensitivity> -->
-			<!-- </statFactors> -->
 		</li>
 	</stages>
 </HediffDef>
